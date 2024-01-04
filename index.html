@@ -20,6 +20,9 @@
   <script>
     var video = document.getElementsByTagName("whep-video")[0].shadowRoot.children[1].children[0]; /* BIG HACK */
     video.setAttribute("controls","controls");
+    video.setAttribute('id', 'player');
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.3.23/plyr.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.3.23/plyr.polyfilled.min.js"></script>
 </body>
 </html>
