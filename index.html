@@ -21,8 +21,7 @@
   <script>
     var video = document.getElementsByTagName("whep-video")[0].shadowRoot.children[1].children[0]; /* BIG HACK */
     video.setAttribute("controls","controls");
-    video.setAttribute('id', 'player');
+    video.onclick = function() { video.muted = false; }
   </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.3.23/plyr.polyfilled.min.js"></script>
 </body>
 </html>
