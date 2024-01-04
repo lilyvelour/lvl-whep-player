@@ -19,9 +19,10 @@
   <whep-video src="https://customer-vwunvf3bbm22f3hd.cloudflarestream.com/61e0e789a94ec72a39ea6bab6957fff3/webRTC/play"/>
   <script src="https://unpkg.com/@eyevinn/whep-video-component@0.1.0/dist/whep-video.component.js"></script>
   <script>
-    var video = document.getElementsByTagName("whep-video")[0].shadowRoot.children[1].children[0]; /* BIG HACK */
-    /*video.setAttribute("controls","controls");*/
-    video.onclick = function() { video.muted = false; video.volume = 1; }
+    var videoContainer = document.getElementsByTagName("whep-video")[0].shadowRoot.children[1];
+    var video = videoContainer.children[0]; /* BIG HACK */
+    video.setAttribute("controls","controls");
+    videoContainer.onclick = function() { video.muted = false; video.volume = 1; }
   </script>
 </body>
 </html>
